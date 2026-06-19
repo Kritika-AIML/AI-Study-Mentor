@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Doubt Solver</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <div class="sidebar">
+
+        <h2>📚 StudySphere</h2>
+
+        <a href="/dashboard">📊 Dashboard</a>
+        <a href="/planner">🧠 Study Planner</a>
+        <a href="/quiz">📝 Quiz Generator</a>
+        <a href="/doubt">❓ Doubt Solver</a>
+
+    </div>
+
+    <div class="main-content">
+
+        <div class="planner-card">
+
+            <h1>❓ AI Doubt Solver</h1>
+
+            <form method="POST">
+
+<label>Ask Your Question</label>
+
+<textarea
+name="question"
+rows="5"
+required></textarea>
+
+<button type="submit">
+Ask AI
+</button>
+
+</form>
+
+            <hr>
+
+            <h2>AI Response</h2>
+
+            <div class="answer-box">
+
+                <hr>
+
+<h2>Answer</h2>
+
+<div class="answer-box">
+
+{{ answer }}
+
+</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Generator</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <div class="sidebar">
+
+        <h2>📚 StudySphere</h2>
+
+        <a href="/dashboard">📊 Dashboard</a>
+        <a href="/planner">🧠 Study Planner</a>
+        <a href="/quiz">📝 Quiz Generator</a>
+        <a href="/doubt">❓ Doubt Solver</a>
+
+    </div>
+
+    <div class="main-content">
+
+        <div class="planner-card">
+
+            <h1>📝 Quiz Generator</h1>
+
+            <form>
+<form method="POST">
+
+<label>Topic</label>
+
+<input
+type="text"
+name="topic"
+placeholder="Python Functions"
+required>
+
+<button type="submit">
+Generate Quiz
+</button>
+
+
+
+            </form>
+
+            <hr>
+
+            <h2>Generated Quiz</h2>
+
+            <div class="quiz-box">
+<hr>
+
+<h2>Generated Questions</h2>
+
+<div class="quiz-box">
+
+{% for q in questions %}
+<p>• {{ q }}</p>
+{% endfor %}
+
+</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

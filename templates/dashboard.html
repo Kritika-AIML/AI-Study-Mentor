@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudySphere Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <h2>📚 StudySphere</h2>
+
+        <a href="/dashboard">📊 Dashboard</a>
+        <a href="/planner">🧠 Study Planner</a>
+        <a href="/quiz">📝 Quiz Generator</a>
+        <a href="/doubt">❓ Doubt Solver</a>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="dashboard-content">
+
+        <h1>👋 Welcome Back, Kritika</h1>
+
+        <p class="subtitle">
+            Track your learning journey and stay productive.
+        </p>
+
+        <!-- Stats -->
+        <div class="stats-container">
+
+            <div class="stat-card">
+                <h3>🔥 Study Streak</h3>
+                <p>{{ streak }} Days</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>⭐ XP Points</h3>
+                <p>{{ xp }} XP</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>📚 Study Hours</h3>
+                <p>{{ study_hours }}</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>🎯 Weekly Goal</h3>
+                <p>{{ goal }}%</p>
+            </div>
+
+        </div>
+
+        <!-- Progress Section -->
+        <div class="progress-section">
+
+            <h2>📈 Weekly Progress</h2>
+
+            <div class="progress-card">
+
+                <p>Study Completion</p>
+
+                <div class="progress-bar">
+                    <div
+                        class="progress-fill"
+                        style="width: {{ goal }}%;">
+                    </div>
+                </div>
+
+                <p>{{ goal }}% Completed</p>
+
+            </div>
+
+        </div>
+
+        <!-- Today's Tasks -->
+        <div class="achievement-section">
+
+            <h2>📅 Today's Tasks</h2>
+
+            <div class="profile-card">
+
+                <p>✅ Quant Practice - 30 Questions</p>
+
+                <p>✅ English Vocabulary - 20 Words</p>
+
+                <p>⬜ Mock Test - 1 Hour</p>
+
+                <p>⬜ Current Affairs Revision</p>
+
+            </div>
+
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="achievement-section">
+
+            <h2>📊 Recent Activity</h2>
+
+            <div class="profile-card">
+
+                <p>🔥 Completed Quant Quiz</p>
+
+                <p>⭐ Earned 50 XP</p>
+
+                <p>📝 Generated Python Quiz</p>
+
+                <p>📚 Studied for 2 Hours</p>
+
+            </div>
+
+        </div>
+
+        <!-- Achievements -->
+        <div class="achievement-section">
+
+            <h2>🏆 Achievements</h2>
+
+            <div class="achievement-container">
+
+                <div class="badge">🔥 7 Day Streak</div>
+
+                <div class="badge">⭐ Quiz Master</div>
+
+                <div class="badge">🎯 Goal Crusher</div>
+
+                <div class="badge">📚 Consistent Learner</div>
+
+            </div>
+
+        </div>
+
+        <!-- Profile -->
+        <div class="profile-section">
+
+            <h2>👤 Student Profile</h2>
+
+            <div class="profile-card">
+
+                <h3>Kritika</h3>
+
+                <p>🎓 Level 4 Learner</p>
+
+                <p>⭐ XP: {{ xp }}</p>
+
+                <p>🎯 Target Exam: SSC CGL 2026</p>
+
+                <p>🏅 Next Level: 500 XP</p>
+
+            </div>
+
+        </div>
+
+        <!-- Subject Progress -->
+        <div class="skills-section">
+
+            <h2>📚 Subject Progress</h2>
+
+            <div class="skill">
+
+                <p>Quantitative Aptitude - 80%</p>
+
+                <div class="skill-bar">
+                    <div class="skill-fill quant"></div>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <p>Reasoning - 70%</p>
+
+                <div class="skill-bar">
+                    <div class="skill-fill reasoning"></div>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <p>English - 60%</p>
+
+                <div class="skill-bar">
+                    <div class="skill-fill english"></div>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <p>General Knowledge - 50%</p>
+
+                <div class="skill-bar">
+                    <div class="skill-fill gk"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

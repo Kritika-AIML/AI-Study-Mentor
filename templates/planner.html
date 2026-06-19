@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Planner</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <div class="sidebar">
+
+        <h2>📚 StudySphere</h2>
+
+        <a href="/dashboard">📊 Dashboard</a>
+        <a href="/planner">🧠 Study Planner</a>
+        <a href="/quiz">📝 Quiz Generator</a>
+        <a href="/doubt">❓ Doubt Solver</a>
+
+    </div>
+
+    <div class="main-content">
+
+        <div class="planner-card">
+
+            <h1>🧠 Smart Study Planner</h1>
+
+           <form method="POST">
+
+<label>Exam Name</label>
+<input type="text" name="exam" required>
+
+<label>Study Hours Per Day</label>
+<input type="number" name="hours" required>
+
+<button type="submit">
+Generate Study Roadmap
+</button>
+
+</form>
+<hr>
+
+<h2>Generated Roadmap</h2>
+
+<div class="quiz-box">
+
+<pre>{{ roadmap }}</pre>
+
+</div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
